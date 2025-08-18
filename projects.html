@@ -1,0 +1,151 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surya J | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      
+.projects {
+  text-align: center;
+  justify-items: center;
+  display: flex;
+  font-weight:lighter;
+  flex-direction: column; /* Stack items vertically */
+  gap: 50px; /* Space between h1, p, and buttons */
+  max-width: 500px;
+
+}
+.projects h2{
+  color: black;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  left: 550px;
+  padding-bottom: 8px;
+  text-shadow: 0 0  5px #ffffff;
+}
+.projects h2::before,
+.projects h2::after{
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 65%;
+  background: #f34c4c;
+  left: 30px;
+  bottom: 0;
+}
+.projects h2::after{
+  bottom: -7px;
+  width: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items:center;
+  justify-content: space-around;
+  min-width: 1300px;
+  min-height: 400px;
+  margin: 0 auto;
+}
+
+.project-item {
+    background-color:white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #f34c4c;
+    transition: all 0.4s ease;
+    max-width: 350px;
+    position: relative;
+}
+.project-item h3 {
+    font-size: 22px; /* bigger title */
+    margin-bottom: 12px;
+    text-shadow: 0 0 2px #fff;
+}
+
+.project-item p {
+    font-size: 15px;
+        word-spacing: 3px;   /* space between words */
+    letter-spacing: 0.5px; /* optional: space between letters */
+    line-height: 1.6;  
+}
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.project-item:hover::after,.project-item:hover::before{
+  --angle: 0deg;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from  var(--angle), transparent 10% , rgb(255, 0, 0));
+  top: 50%;
+  left: 50%;
+  translate:  -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 12px;
+  animation: 2.5s spin linear infinite;
+}
+.project-item::before{
+  filter: blur(1.5rem);
+  opacity: 0.5; 
+}
+
+@keyframes spin {
+  from{
+    --angle:0deg;
+  }  
+  to{
+    --angle:360deg
+  }
+}
+
+      </style>
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="logo">Surya J</h1>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+   <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-item">
+          <h3> Control the Cursor by Hand</h3>
+          <p><strong style="font-weight: 700;"> USE :</strong> using PyAutoGUI, MediaPipe, and OpenCV.</p>
+          <p><strong style="font-weight: 700;"> Description:</strong> Built a virtual mouse using MediaPipe for hand tracking and PyAutoGUI for controlling mouse movements. This system allows controlling the computer cursor with right-hand gestures, including single-click, double-click, and ALT+F4 gestures. Useful for touchless control.</p>
+        </div>
+        <div class="project-item">
+          <h3>Social Network Analysis</h3>
+          <p><strong style="font-weight: 700;"> USE :</strong> Utilized Python, Graph Theory, and Data Analysis.</p>
+          <p><strong style="font-weight: 700;"> Description:</strong> Performed analysis on user connections from a social media dataset using Python and NetworkX. Computed metrics like degree centrality and betweenness to find influential users. Used visualization tools like Matplotlib and Gephi.</p>
+        </div>
+        <div class="project-item">
+          <h3> AI Code Reviews</h3>
+          <p><strong style="font-weight: 700;"> USE :</strong>Automated review system using OpenAI API and Streamlit.</p>
+          <p><strong style="font-weight: 700;"> Description:</strong>Developed an intelligent code review application using Python, Streamlit, and the OpenAI API. This tool allows users to paste code snippets and receive real-time feedback on syntax errors, logic flaws, and performance improvements.</p>
+        </div>
+</section>
+          <footer class="footer" style="position: relative; top: 50px;">
+      <p class="text"><span style=" color: #f34c4c; font-weight: bold; text-shadow: 0 0  2px #f34c4c; "> &copy; 2025  Surya J   </span><br><span style=" color: black; font-weight: bold; text-shadow: 0 0  5px #ffffff;"> All rights reserved.</span></p>
+    </footer>
+    </footer>
+    </body>

@@ -1,0 +1,186 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surya J | Portfolio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .skills {
+            padding: 100px 10%;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            background: rgb(255, 255, 255); /* Added dark background for visibility */
+        }
+
+        .skills h2 {
+            color: black;
+            font-size: 30px;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+            text-shadow: 0 0 5px #ffffff;
+            margin-bottom: 60px;
+        }
+
+        .skills h2::before,
+        .skills h2::after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            background: #f34c4c;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .skills h2::after {
+            bottom: -7px;
+            width: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+        }
+
+        .skill {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            height: 120px;
+            background: white;
+            border: #000000 solid 1px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .ripple {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgb(231, 28, 28) 0%, transparent 90%);
+            border-radius: 50%;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+
+        .skill:hover .ripple {
+            transform: scale(1.2);
+        }
+
+        .skill i {
+            font-size: 2.5rem;
+            color: #000000;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .skill span {
+            font-size: 0.9rem;
+            color: #fff;
+            font-weight: 500;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            background: rgba(243, 76, 76, 0.1);
+        }
+
+        .skill:hover span {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill:hover i {
+            transform: scale(1.1);
+            text-shadow: 0 0 15px #f34c4c;
+            color: #fff;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="logo">Surya J</h1>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+<section class="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="skill">
+            <i class="fab fa-python"></i>
+            <span>Python</span>
+            <div class="ripple"></div>
+        </div>
+        <div class="skill">
+            <i class="fab fa-java"></i>
+            <span>Java</span>
+            <div class="ripple"></div>
+        </div>
+        <div class="skill">
+            <i class="fas fa-code"></i>
+            <span>C++</span>
+            <div class="ripple"></div>
+        </div>
+        <div class="skill">
+            <i class="fab fa-html5"></i>
+            <span>HTML5</span>
+            <div class="ripple"></div>
+        </div>
+        <div class="skill">
+            <i class="fab fa-css3-alt"></i>
+            <span>CSS3</span>
+            <div class="ripple"></div>
+        </div>
+        <div class="skill">
+            <i class="fab fa-js-square"></i>
+            <span>JavaScript</span>
+            <div class="ripple"></div>
+        </div>
+        <div class="skill">
+            <i class="fab fa-figma"></i>
+            <span>Figma</span>
+            <div class="ripple"></div>
+        </div>
+        <div class="skill">
+            <i class="fab fa-aws"></i>
+            <span>AWS</span>
+            <div class="ripple"></div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer" style="position: relative; top: 50px;">
+<p class="text"><span style=" color: #f34c4c; font-weight: bold; text-shadow: 0 0  2px #f34c4c; "> &copy; 2025  Surya J   </span><br><span style=" color: black; font-weight: bold; text-shadow: 0 0  5px #ffffff;"> All rights reserved.</span></p>
+</footer>
+    </body>
